@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="90" fill="#f4faf2" stroke="#d5e8cf" stroke-width="4"/>
+  <circle cx="100" cy="100" r="75" fill="#74c69d"/>
+  <!-- Sprouts & Pomegranates -->
+  <circle cx="75" cy="80" r="7" fill="#e63946"/>
+  <circle cx="120" cy="80" r="7" fill="#e63946"/>
+  <circle cx="95" cy="105" r="7" fill="#e63946"/>
+  <circle cx="130" cy="120" r="7" fill="#e63946"/>
+  <circle cx="70" cy="125" r="7" fill="#e63946"/>
+  <path d="M85 75 Q90 60 100 70" stroke="#1b4332" stroke-width="2" fill="none"/>
+  <path d="M110 110 Q120 95 130 105" stroke="#1b4332" stroke-width="2" fill="none"/>
+</svg>
