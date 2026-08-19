@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <radialGradient id="bowlGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8efe6"/>
+    </radialGradient>
+  </defs>
+  <circle cx="300" cy="200" r="180" fill="url(#bowlGrad)" stroke="#cce0cc" stroke-width="8"/>
+  <!-- Salad Leaves -->
+  <path d="M220 120 Q260 80 300 130 Q340 90 380 140 Q410 200 370 260 Q300 310 230 250 Q180 190 220 120 Z" fill="#4fa843"/>
+  <path d="M250 140 Q290 110 330 150 Q360 210 320 250 Q260 270 240 210 Z" fill="#388e3c"/>
+  <!-- Tomato & Corn & Avocado slices -->
+  <circle cx="250" cy="180" r="22" fill="#e53935"/>
+  <circle cx="350" cy="220" r="22" fill="#e53935"/>
+  <circle cx="290" cy="240" r="18" fill="#fbc02d"/>
+  <circle cx="310" cy="170" r="15" fill="#fbc02d"/>
+  <path d="M340 140 C360 140 380 160 370 180 C350 180 330 160 340 140 Z" fill="#8bc34a"/>
+  <!-- Fork & Spoon Accent -->
+  <path d="M120 160 L180 220" stroke="#a0b89e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M480 160 L420 220" stroke="#a0b89e" stroke-width="6" stroke-linecap="round"/>
+</svg>
