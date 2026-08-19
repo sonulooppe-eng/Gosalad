@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Salad — Fresh, Healthy & Crisp</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Go <span>Salad</span></a>
+      <nav class="nav-links">
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="btn btn-primary" onclick="openOrderModal()">Order Now</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <span class="badge">100% Farm Fresh Ingredients</span>
+      <h1>Fuel Your Day with <span>Crisp & Clean</span> Salads</h1>
+      <p>Hand-tossed artisan bowls made fresh daily with organic veggies, house-made dressings, and clean protein.</p>
+      <div class="hero-cta">
+        <a href="#menu" class="btn btn-primary">Explore Menu</a>
+        <a href="#about" class="btn btn-secondary">Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="container feature-grid">
+      <div class="feature-card">
+        <div class="icon">🌱</div>
+        <h3>Organic Sourcing</h3>
+        <p>Locally sourced vegetables delivered fresh to our kitchen every single morning.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🥗</div>
+        <h3>House-Made Dressings</h3>
+        <p>Zero refined sugars or artificial preservatives. Made from scratch daily.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⚡</div>
+        <h3>Fast Delivery</h3>
+        <p>Packed in eco-friendly chilled containers to ensure peak crispness at your door.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2>Popular Salad Bowls</h2>
+        <p>Pick your favorite signature bowl or customize your greens.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="vegan">Vegan</button>
+        <button class="filter-btn" data-filter="protein">High Protein</button>
+        <button class="filter-btn" data-filter="keto">Keto</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered dynamically via JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container about-container">
+      <div class="about-text">
+        <h2>Freshness You Can Taste, Nutrition You Can Feel</h2>
+        <p>At <strong>Go Salad</strong>, we believe eating healthy should never be boring or time-consuming. We craft nutrient-rich, flavorful salads designed to fuel busy lifestyles without compromising on taste.</p>
+        <ul class="check-list">
+          <li>✓ No artificial additives or hidden sugars</li>
+          <li>✓ 100% biodegradable and compostable packaging</li>
+          <li>✓ Custom macros available for fitness goals</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#" class="logo">Go <span>Salad</span></a>
+        <p>Fresh healthy bowls, tossed to perfection.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Locations</a>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Healthy</h4>
+        <p>Subscribe for weekly specials and secret bowls.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit" class="btn btn-primary">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Go Salad. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
