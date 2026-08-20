@@ -289,222 +289,64 @@ function initForms() {
     });
   }
 }
-/* ============================================================
-   POV Interactive Salad Section Styles
-============================================================ */
-.pov-experience-section {
-  position: relative;
-  height: 260vh; /* Extended height drives the smooth scroll progression */
-  background: radial-gradient(circle at center, #1b2024 0%, #0d1114 100%);
-  color: #fff;
-}
+// ============================================================
+// POV Scroll-Driven Salad Animation
+// ============================================================
+window.addEventListener("scroll", handlePovScroll);
 
-.pov-sticky-wrapper {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+function handlePovScroll() {
+  const section = document.getElementById("povExperience");
+  if (!section) return;
 
-.pov-ambient-glow {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  background: radial-gradient(circle, rgba(82, 183, 136, 0.12) 0%, rgba(0,0,0,0) 70%);
-  filter: blur(40px);
-  pointer-events: none;
-}
+  const rect = section.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+  const totalScrollable = section.offsetHeight - windowHeight;
 
-.pov-captions {
-  position: absolute;
-  top: 15%;
-  width: 100%;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none;
-}
+  // Calculate scroll progress from 0 to 1
+  let progress = -rect.top / totalScrollable;
+  progress = Math.max(0, Math.min(1, progress));
 
-.pov-caption {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.8rem;
-  font-weight: 800;
-  letter-spacing: -0.5px;
-  color: #d8f3dc;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
-}
+  const bowl = document.getElementById("povBowl");
+  const utensil = document.getElementById("povUtensil");
+  const bite = document.getElementById("chopstickFood");
+  const g1 = document.getElementById("garnish1");
+  const g2 = document.getElementById("garnish2");
 
-.pov-caption.active {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
+  const cap1 = document.getElementById("cap1");
+  const cap2 = document.getElementById("cap2");
+  const cap3 = document.getElementById("cap3");
 
-.pov-stage {
-  position: relative;
-  width: 520px;
-  height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+  // 1. Bowl zoom & subtle tilt as you descend
+  const bowlScale = 0.85 + (progress * 0.35);
+  const bowlRotate = progress * 20;
+  bowl.style.transform = `scale(${bowlScale}) rotate(${bowlRotate}deg)`;
 
-/* Ceramic Bowl Design */
-.pov-bowl {
-  position: relative;
-  width: 440px;
-  height: 440px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #2a2c30, #121316 70%);
-  box-shadow: 
-    inset 0 10px 25px rgba(0,0,0,0.8),
-    inset 0 -5px 15px rgba(255,255,255,0.05),
-    0 30px 60px rgba(0, 0, 0, 0.6);
-  border: 10px solid #1c1e22;
-  will-change: transform;
-}
+  // 2. Parallax dynamic depth on garnish
+  g1.style.transform = `translateY(${progress * -35}px) translateX(${progress * 25}px)`;
+  g2.style.transform = `translateY(${progress * 25}px) scale(${1 + progress * 0.2})`;
 
-.bowl-interior {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-/* Avocado / Green Puree spread at top */
-.dressing-spread {
-  position: absolute;
-  top: 10%;
-  left: 18%;
-  width: 250px;
-  height: 180px;
-  background: radial-gradient(ellipse at center, #708d42 0%, #4f6829 80%);
-  border-radius: 50% 60% 40% 50% / 40% 50% 60% 50%;
-  filter: blur(1px);
-  opacity: 0.95;
-}
-
-/* Radish / Daikon Slaw bottom left */
-.slaw-nest {
-  position: absolute;
-  bottom: 8%;
-  left: 10%;
-  width: 200px;
-  height: 180px;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255,255,255,0.85),
-    rgba(255,255,255,0.85) 3px,
-    rgba(235,245,235,0.2) 3px,
-    rgba(235,245,235,0.2) 7px
-  );
-  border-radius: 40% 60% 70% 30%;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4));
-}
-
-/* Sliced seared protein */
-.protein-slices {
-  position: absolute;
-  top: 25%;
-  left: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  transform: rotate(-15deg);
-}
-
-.slice {
-  width: 130px;
-  height: 24px;
-  background: linear-gradient(90deg, #d07161 0%, #ba4e3d 40%, #e58775 80%, #d07161 100%);
-  border-radius: 12px;
-  border-left: 3px solid #8e2b1b;
-  border-right: 3px solid #8e2b1b;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-/* Fresh Microgreens garnish */
-.microgreens {
-  position: absolute;
-  bottom: 22%;
-  right: 22%;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, #2d6a4f 0%, #1b4332 75%);
-  border-radius: 60% 40% 50% 50%;
-  box-shadow: inset 0 0 15px rgba(0,0,0,0.4);
-}
-
-/* Parallax Garnish Embellishments */
-.garnish {
-  position: absolute;
-  font-size: 1.8rem;
-  pointer-events: none;
-  transition: transform 0.1s linear;
-}
-.g1 { top: 30%; right: 25%; }
-.g2 { bottom: 35%; left: 35%; }
-.g3 { top: 18%; left: 45%; font-size: 1.2rem; }
-
-/* Chopsticks POV */
-.pov-hand-utensil {
-  position: absolute;
-  bottom: -60px;
-  right: -80px;
-  width: 320px;
-  height: 320px;
-  pointer-events: none;
-  transform-origin: bottom right;
-  z-index: 5;
-  will-change: transform;
-}
-
-.chopstick {
-  position: absolute;
-  background: linear-gradient(to top left, #e0cbab 0%, #bca380 90%, #6e5538 100%);
-  border-radius: 4px;
-  box-shadow: -15px 25px 25px rgba(0, 0, 0, 0.45);
-}
-
-.stick-left {
-  width: 10px;
-  height: 320px;
-  transform: rotate(-44deg);
-  top: 10px;
-  right: 110px;
-}
-
-.stick-right {
-  width: 9px;
-  height: 330px;
-  transform: rotate(-38deg);
-  top: 15px;
-  right: 90px;
-}
-
-.chopstick-food {
-  position: absolute;
-  top: 25px;
-  right: 175px;
-  font-size: 2rem;
-  transform: scale(0.6);
-  opacity: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-}
-
-/* Mobile responsive handling */
-@media (max-width: 768px) {
-  .pov-stage {
-    transform: scale(0.75);
+  // 3. Chopstick dipping in and lifting food (POV action)
+  if (progress < 0.45) {
+    // Chopsticks approach bowl
+    const uX = (0.45 - progress) * 220;
+    const uY = (0.45 - progress) * 180;
+    utensil.style.transform = `translate(${uX}px, ${uY}px) rotate(${progress * 6}deg)`;
+    bite.style.opacity = "0";
+    bite.style.transform = "scale(0.5)";
+  } else {
+    // Chopsticks grab salad & lift upward toward screen
+    const liftProgress = (progress - 0.45) / 0.55;
+    const liftX = liftProgress * -70;
+    const liftY = liftProgress * -80;
+    const liftScale = 1 + (liftProgress * 0.4);
+    utensil.style.transform = `translate(${liftX}px, ${liftY}px) scale(${liftScale})`;
+    
+    bite.style.opacity = "1";
+    bite.style.transform = `scale(${0.8 + liftProgress * 0.5})`;
   }
-  .pov-caption {
-    font-size: 1.3rem;
-  }
+
+  // 4. Captions synchronised with stages
+  cap1.classList.toggle("active", progress >= 0.05 && progress < 0.35);
+  cap2.classList.toggle("active", progress >= 0.35 && progress < 0.70);
+  cap3.classList.toggle("active", progress >= 0.70);
 }
