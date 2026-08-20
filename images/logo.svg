@@ -26,17 +26,17 @@
       }
       .badge-title {
         font-family: 'Montserrat', 'Arial Black', sans-serif;
-        font-size: 38px;
+        font-size: 36px;
         font-weight: 900;
         fill: #1b6833;
         letter-spacing: -0.5px;
       }
       .badge-tagline {
         font-family: 'Montserrat', sans-serif;
-        font-size: 11.5px;
+        font-size: 11px;
         font-weight: 700;
         fill: #2d342d;
-        letter-spacing: 3px;
+        letter-spacing: 2.8px;
       }
     </style>
 
@@ -96,15 +96,15 @@
     </g>
   </defs>
 
-  <!-- ================= LEFT CIRCLE EMBLEM (10% RADIUS REDUCTION) ================= -->
+  <!-- ================= LEFT CIRCLE EMBLEM (ADDITIONAL 5% REDUCTION -> r: 141) ================= -->
   <g id="emblem" transform="translate(190, 200)">
-    <!-- Outer Ring (r: 165 -> 148.5) -->
-    <circle cx="0" cy="0" r="148.5" fill="#ffffff" stroke="#488e35" stroke-width="10"/>
-    <!-- Inner Ring (r: 154 -> 138.6) -->
-    <circle cx="0" cy="0" r="138.6" fill="#ffffff" stroke="#488e35" stroke-width="1.6"/>
+    <!-- Outer Ring (r: 141) -->
+    <circle cx="0" cy="0" r="141" fill="#ffffff" stroke="#488e35" stroke-width="9.5"/>
+    <!-- Inner Ring (r: 131.6) -->
+    <circle cx="0" cy="0" r="131.6" fill="#ffffff" stroke="#488e35" stroke-width="1.5"/>
 
     <!-- Scaled Salad Illustration -->
-    <g transform="translate(0, -38) scale(0.288)">
+    <g transform="translate(0, -36) scale(0.274)">
       <!-- Background Leaves -->
       <path d="M-200,-50 C-260,-80 -270,-140 -220,-190 C-170,-240 -140,-170 -100,-130 C-130,-90 -160,-70 -200,-50 Z" fill="#3a8a30"/>
       <path d="M-140,-120 C-180,-190 -200,-230 -130,-260 C-60,-290 -70,-200 -50,-150 Z" fill="#3c8d2a"/>
@@ -162,13 +162,13 @@
     </g>
 
     <!-- Badge Text -->
-    <text x="0" y="62" class="badge-title" text-anchor="middle">GoSalad</text>
-    <text x="0" y="84" class="badge-tagline" text-anchor="middle">pick mix go</text>
+    <text x="0" y="58" class="badge-title" text-anchor="middle">GoSalad</text>
+    <text x="0" y="79" class="badge-tagline" text-anchor="middle">pick mix go</text>
 
     <!-- Badge Colored Dots -->
-    <circle cx="-16" cy="98" r="4" fill="#4d9b32"/>
-    <circle cx="0" cy="98" r="4" fill="#f37324"/>
-    <circle cx="16" cy="98" r="4" fill="#c41a15"/>
+    <circle cx="-15" cy="93" r="3.8" fill="#4d9b32"/>
+    <circle cx="0" cy="93" r="3.8" fill="#f37324"/>
+    <circle cx="15" cy="93" r="3.8" fill="#c41a15"/>
   </g>
 
   <!-- ================= RIGHT HORIZONTAL WORDMARK ================= -->
