@@ -1,283 +1,566 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GoSalad — Pick . Mix . Go.</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
- <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  
+  <title>GoSalad | Fresh Salads & Healthy Food</title>
+  <meta name="title" content="GoSalad | Fresh Salads & Healthy Food" />
+  <meta name="description" content="GoSalad — pick, mix and enjoy fresh salads made your way in New Panvel, Navi Mumbai." />
+  <link rel="canonical" href="https://yourusername.github.io/gosalad-website/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="GoSalad | Fresh Salads & Healthy Food" />
+  <meta property="og:description" content="GoSalad — pick, mix and enjoy fresh salads made your way in New Panvel, Navi Mumbai." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" />
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <!-- Top Announcement Bar -->
-  <div class="announcement-bar">
-    <p>🚚 Free 30-minute delivery across town on orders above ₹499 | Use Code: <strong>FRESHGO</strong></p>
-  </div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header / Navbar -->
-  <header class="navbar" id="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <img src="images/logo.svg" alt="GoSalad Logo" class="logo-img" />
-        <span>Go<span>Salad</span></span>
+  <header class="site-header" id="siteHeader">
+    <div class="container header-container">
+      <a href="#home" class="brand-logo" aria-label="GoSalad Home">
+        <img src="images/logo.svg" alt="GoSalad - pick mix go" width="180" height="45" />
       </a>
 
-      <nav class="nav-links" id="navLinks">
-        <a href="#hero">Home</a>
-        <a href="#menu">Our Menu</a>
-        <a href="#features">Why Us</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#build" class="nav-link">Build Your Salad</a></li>
+          <li><a href="#menu" class="nav-link">Menu</a></li>
+          <li><a href="#showcase" class="nav-link">Showcase</a></li>
+          <li><a href="#location" class="nav-link">Contact</a></li>
+        </ul>
       </nav>
 
-      <div class="nav-actions">
-        <button class="cart-trigger" id="cartTrigger" aria-label="Open Cart">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="9" cy="21" r="1"></circle>
-            <circle cx="20" cy="21" r="1"></circle>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-          </svg>
-          <span class="cart-badge" id="cartCount">0</span>
+      <div class="header-action-group">
+        <a href="#order" class="btn btn-primary header-cta">Order Now</a>
+        <button class="hamburger-btn" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileNav" aria-label="Toggle navigation menu">
+          <span class="bar bar-1"></span>
+          <span class="bar bar-2"></span>
+          <span class="bar bar-3"></span>
         </button>
-        <a href="#menu" class="btn btn-primary nav-cta">Order Now</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section Carousel -->
-  <section class="hero-carousel" id="hero">
-    <div class="carousel-track" id="heroTrack">
-      <!-- Slide 1 -->
-      <div class="carousel-slide active-slide">
-        <div class="container slide-content">
-          <div class="slide-text">
-            <span class="badge">🌱 Farm Fresh & 100% Organic</span>
-            <h1>Pick .<br><span> Mix .</span><br><span> Go.</span></h1>
-            <p>Artisanal, nutrient-packed salad bowls made fresh to order with cold-pressed house dressings and premium crisp greens.</p>
-            <div class="hero-btns">
-              <a href="#menu" class="btn btn-primary">Explore 10 Bowls</a>
-              <a href="#about" class="btn btn-secondary">Our Story</a>
+  <div class="mobile-nav-backdrop" id="mobileNavBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNav" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="mobile-drawer-header">
+      <img src="images/logo.svg" alt="GoSalad" class="mobile-drawer-logo" width="150" height="38" />
+      <button class="close-drawer-btn" id="closeDrawerBtn" aria-label="Close navigation menu">&times;</button>
+    </div>
+    <nav class="mobile-drawer-links">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#build" class="mobile-link">Build Your Salad</a>
+      <a href="#menu" class="mobile-link">Menu</a>
+      <a href="#popular" class="mobile-link">Best Sellers</a>
+      <a href="#showcase" class="mobile-link">Ingredients</a>
+      <a href="#location" class="mobile-link">Location & Hours</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </nav>
+    <div class="mobile-drawer-footer">
+      <a href="#order" class="btn btn-primary btn-block mobile-link">Order Now</a>
+      <a href="tel:+919769616262" class="mobile-contact-quick">📞 +91 9769616262</a>
+    </div>
+  </aside>
+
+  <main id="main-content">
+
+    <section class="hero-section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text-col fade-in-up">
+          <span class="tagline-badge">pick &bull; mix &bull; go</span>
+          <h1 class="hero-title">Fresh. <span>Your Way.</span></h1>
+          <p class="hero-subtitle">
+            Pick your greens. Mix your favourites. Go fresh. Wholesome artisan salad bowls crafted daily with fresh ingredients.
+          </p>
+          <div class="hero-actions">
+            <a href="#build" class="btn btn-primary">Build Your Salad</a>
+            <a href="#menu" class="btn btn-secondary">View Menu</a>
+          </div>
+          <div class="hero-perks">
+            <div class="hero-perk-item">
+              <span class="perk-bullet">&check;</span> 100% Fresh Daily
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-bullet">&check;</span> Handcrafted Dressing
+            </div>
+            <div class="hero-perk-item">
+              <span class="perk-bullet">&check;</span> Tailored Combos
             </div>
           </div>
-          <div class="slide-visual">
-            <img src="images/hero-banner1.jpg" alt="Fresh Healthy Salad Bowls" class="hero-illustration" />
-          </div>
         </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="carousel-slide">
-        <div class="container slide-content">
-          <div class="slide-text">
-            <span class="badge">⚡ Macro-Balanced Goodness</span>
-            <h1>Pick . Mix.<br><span> Go.</span></h1>
-            <p>High-protein, keto, and vegan options crafted by certified nutritionists to keep you energetic all day long.</p>
-            <div class="hero-btns">
-              <a href="#menu" class="btn btn-primary">Order High Protein</a>
-              <a href="#contact" class="btn btn-secondary">Bulk Subscriptions</a>
+        <div class="hero-visual-col fade-in-up delay-1">
+          <div class="hero-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80" 
+              alt="Fresh vibrant artisan salad bowl with fresh greens and assorted toppings" 
+              class="hero-img"
+              width="600"
+              height="600"
+              loading="eager"
+            />
+            <div class="hero-floating-card">
+              <span class="floating-icon">🥗</span>
+              <div>
+                <strong>Artisan Bowls</strong>
+                <p>Mixed fresh for you</p>
+              </div>
             </div>
           </div>
-          <div class="slide-visual">
-            <img src="images/bowl-paneer.svg" alt="Tandoori Paneer Bowl" class="hero-illustration" />
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual fade-in-up">
+            <div class="about-image-card">
+              <img 
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" 
+                alt="Colorful fresh cut salad vegetables and toppings" 
+                class="about-img"
+                loading="lazy"
+                width="500"
+                height="550"
+              />
+            </div>
+          </div>
+          <div class="about-content fade-in-up delay-1">
+            <span class="section-kicker">Our Philosophy</span>
+            <h2 class="section-title">Fresh Food. Made Your Way.</h2>
+            <p class="section-description">
+              At GoSalad, we believe healthy eating should be simple, natural, and completely customized to your personal lifestyle.
+            </p>
+            <p class="section-description">
+              We empower you to pick and mix crisp greens, hearty proteins, vibrant vegetable toppings, and house dressings according to your unique taste.
+            </p>
+            <div class="about-features-list">
+              <div class="about-feature-item">
+                <div class="feature-icon-bubble">🥬</div>
+                <div>
+                  <h3>Crisp &amp; Sourced Daily</h3>
+                  <p>Hand-selected produce prepared every morning for ultimate crunch.</p>
+                </div>
+              </div>
+              <div class="about-feature-item">
+                <div class="feature-icon-bubble">🥣</div>
+                <div>
+                  <h3>Your Custom Mix</h3>
+                  <p>Endless combinations to match whatever you crave.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Hero Carousel Controls -->
-    <button class="slider-arrow hero-prev" id="heroPrev" aria-label="Previous Slide">&#10094;</button>
-    <button class="slider-arrow hero-next" id="heroNext" aria-label="Next Slide">&#10095;</button>
-  </section>
-
-  <!-- Value Features Ribbon -->
-  <section class="features-section" id="features">
-    <div class="container feature-cards-wrapper">
-      <div class="feature-card">
-        <span class="f-icon">🚜</span>
-        <div class="f-info">
-          <h4>Farm-to-Bowl in 4 Hours</h4>
-          <p>Local organic harvest prepped fresh every morning.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <span class="f-icon">🥑</span>
-        <div class="f-info">
-          <h4>Zero Refined Additives</h4>
-          <p>Cold-pressed oils, unfiltered honey & clean dressings.</p>
-        </div>
-      </div>
-      <div class="feature-card">
-        <span class="f-icon">⚡</span>
-        <div class="f-info">
-          <h4>30-Min Chilled Delivery</h4>
-          <p>Delivered in compostable thermal insulation boxes.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Menu Carousel & Filter Section -->
-  <section class="menu-section" id="menu">
-    <div class="container">
-      <div class="section-head-flex">
-        <div>
-          <span class="sub-heading">CHEF-CRAFTED MENU</span>
-          <h2>Our 10 Signature Salad Bowls</h2>
-        </div>
-        <!-- Menu Carousel Arrow Controls -->
-        <div class="carousel-nav-btns">
-          <button class="btn-nav" id="menuPrev" aria-label="Previous Salads">&#8592;</button>
-          <button class="btn-nav" id="menuNext" aria-label="Next Salads">&#8594;</button>
-        </div>
-      </div>
-
-      <!-- Filter Buttons -->
-      <div class="filter-bar">
-        <button class="filter-pill active" data-filter="all">All (10)</button>
-        <button class="filter-pill" data-filter="veg">Veg & Paneer</button>
-        <button class="filter-pill" data-filter="protein">High Protein</button>
-        <button class="filter-pill" data-filter="vegan">Vegan & Keto</button>
-      </div>
-
-      <!-- Menu Horizontal Scroll Carousel -->
-      <div class="menu-carousel-viewport" id="menuViewport">
-        <div class="menu-track" id="menuGrid">
-          <!-- 10 Salad Items Dynamically Injected by script.js -->
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section class="about-section" id="about">
-    <div class="container about-wrapper">
-      <div class="about-image-col">
-        <img src="images/bowl-avocado.svg" alt="Avocado Bowl Fresh Preparation" class="about-img" />
-      </div>
-      <div class="about-text-col">
-        <span class="sub-heading">THE GOSALAD PROMISE</span>
-        <h2>Healthier Eating Doesn't Have To Be Boring.</h2>
-        <p>GoSalad was founded to reinvent fast dining across Indian cities. We source crunchier greens, toast whole seeds, and prepare low-sodium, nutrient-dense bowls that make you feel invigorated.</p>
-        <ul class="promise-list">
-          <li><strong>Eco-Packaging:</strong> 100% plastic-free, biodegradable bagasse bowls.</li>
-          <li><strong>Accurate Nutrition:</strong> Calories and macro splits clearly labeled on every bowl.</li>
-          <li><strong>Daily House Dressings:</strong> No palm oil, artificial colors, or MSG.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Us Section -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-center-head">
-        <span class="sub-heading">GET IN TOUCH</span>
-        <h2>Have a Question or Catering Inquiry?</h2>
-        <p>Drop us a message for daily meal plan subscriptions or bulk party bowls.</p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-info-card">
-          <h3>GoSalad Kitchen & HQ</h3>
-          <p class="info-item">📍 Kunnamangalam, Calicut, 673571 </p>
-          <p class="info-item">📞 +91 9961900965</p>
-          <p class="info-item">✉️ gosaladindia@gmail.com</p>
-          <p class="info-item">⏰ Open Everyday: 11:00 AM – 12:00 PM</p>
+    <section class="how-it-works-section section-padding bg-cream" id="build">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">How It Works</span>
+          <h2 class="section-title">Pick. Mix. Go.</h2>
+          <p class="section-subtitle">Crafting your ideal salad bowl is fast, effortless, and tailored to your tastes.</p>
         </div>
 
-        <form class="contact-form" id="contactForm">
-          <div class="form-row">
-            <input type="text" id="contactName" placeholder="Your Name" required />
-            <input type="email" id="contactEmail" placeholder="Your Email Address" required />
+        <div class="steps-grid">
+          <div class="step-card fade-in-up">
+            <div class="step-badge">01</div>
+            <div class="step-icon-wrap">
+              <span class="step-emoji">🥬</span>
+            </div>
+            <h3 class="step-title">PICK</h3>
+            <p class="step-text">Choose your fresh base and crisp leafy greens from our garden-fresh selection.</p>
           </div>
-          <div class="form-row">
-            <input type="tel" id="contactPhone" placeholder="Your Phone Number" required />
-            <select id="contactTopic">
-              <option value="General Query">General Query</option>
-              <option value="Weekly Subscription">Weekly Subscription</option>
-              <option value="Corporate Catering">Corporate Catering</option>
-              <option value="Feedback">Feedback</option>
-            </select>
-          </div>
-          <textarea id="contactMessage" rows="4" placeholder="How can we help you?" required></textarea>
-          <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer-content">
+          <div class="step-card fade-in-up delay-1">
+            <div class="step-badge">02</div>
+            <div class="step-icon-wrap">
+              <span class="step-emoji">🥑</span>
+            </div>
+            <h3 class="step-title">MIX</h3>
+            <p class="step-text">Add your favourite vegetables, healthy proteins, crunchy toppings, and signature dressings.</p>
+          </div>
+
+          <div class="step-card fade-in-up delay-2">
+            <div class="step-badge">03</div>
+            <div class="step-icon-wrap">
+              <span class="step-emoji">⚡</span>
+            </div>
+            <h3 class="step-title">GO</h3>
+            <p class="step-text">Tossed to perfection and packed fresh for immediate dine-in, takeaway, or pickup.</p>
+          </div>
+        </div>
+
+        <div class="step-cta-container text-center fade-in-up">
+          <a href="#order" class="btn btn-primary">Build Your Salad</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section section-padding" id="menu">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">Fresh Offerings</span>
+          <h2 class="section-title">Explore Our Menu</h2>
+          <p class="section-subtitle">Select a category below to view our chef-curated bowls and build-your-own ingredients.</p>
+        </div>
+
+        <div class="category-tabs-container fade-in-up" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab-btn active" data-category="all" role="tab" aria-selected="true">All Items</button>
+          <button class="menu-tab-btn" data-category="signature" role="tab" aria-selected="false">Signature Salads</button>
+          <button class="menu-tab-btn" data-category="byo" role="tab" aria-selected="false">Build Your Own</button>
+          <button class="menu-tab-btn" data-category="protein" role="tab" aria-selected="false">Protein</button>
+          <button class="menu-tab-btn" data-category="toppings" role="tab" aria-selected="false">Toppings</button>
+          <button class="menu-tab-btn" data-category="dressings" role="tab" aria-selected="false">Dressings</button>
+          <button class="menu-tab-btn" data-category="beverages" role="tab" aria-selected="false">Beverages</button>
+        </div>
+
+        <div class="menu-grid" id="menuGrid" aria-live="polite">
+          </div>
+      </div>
+    </section>
+
+    <section class="popular-section section-padding bg-cream" id="popular">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">Most Loved</span>
+          <h2 class="section-title">Customer Favourites</h2>
+          <p class="section-subtitle">Our top rated combinations curated by our kitchen and loved by customers.</p>
+        </div>
+
+        <div class="popular-grid">
+          <div class="popular-card fade-in-up">
+            <div class="popular-image-wrapper">
+              <span class="popular-tag">Best Seller</span>
+              <img 
+                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80" 
+                alt="Garden Green Crunch Salad" 
+                loading="lazy"
+                width="400"
+                height="260"
+              />
+            </div>
+            <div class="popular-card-body">
+              <div class="card-head">
+                <h3 class="card-title">Garden Green Crunch</h3>
+                <span class="card-price">[PRICE]</span>
+              </div>
+              <p class="card-desc">Crisp seasonal mixed greens, cucumbers, cherry tomatoes, and garden herbs.</p>
+              <a href="#order" class="btn btn-outline btn-block">Order Now</a>
+            </div>
+          </div>
+
+          <div class="popular-card fade-in-up delay-1">
+            <div class="popular-image-wrapper">
+              <span class="popular-tag">Chef's Pick</span>
+              <img 
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" 
+                alt="Mediterranean Harvest Salad" 
+                loading="lazy"
+                width="400"
+                height="260"
+              />
+            </div>
+            <div class="popular-card-body">
+              <div class="card-head">
+                <h3 class="card-title">Mediterranean Harvest</h3>
+                <span class="card-price">[PRICE]</span>
+              </div>
+              <p class="card-desc">Kalamata olives, crisp bell peppers, feta crumbles, and lemon-herb vinaigrette.</p>
+              <a href="#order" class="btn btn-outline btn-block">Order Now</a>
+            </div>
+          </div>
+
+          <div class="popular-card fade-in-up delay-2">
+            <div class="popular-image-wrapper">
+              <span class="popular-tag">Popular</span>
+              <img 
+                src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" 
+                alt="Avocado Citrus Fiesta Salad" 
+                loading="lazy"
+                width="400"
+                height="260"
+              />
+            </div>
+            <div class="popular-card-body">
+              <div class="card-head">
+                <h3 class="card-title">Avocado Citrus Fiesta</h3>
+                <span class="card-price">[PRICE]</span>
+              </div>
+              <p class="card-desc">Creamy sliced avocado, shredded carrots, toasted seeds, and tangy citrus dressing.</p>
+              <a href="#order" class="btn btn-outline btn-block">Order Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-section section-padding" id="why">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">The GoSalad Standard</span>
+          <h2 class="section-title">Why Choose GoSalad</h2>
+          <p class="section-subtitle">Dedicated to serving fresh quality meals without compromise.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card fade-in-up">
+            <div class="why-icon">🌿</div>
+            <h3>Fresh Ingredients</h3>
+            <p>Made with fresh ingredients.</p>
+          </div>
+
+          <div class="why-card fade-in-up delay-1">
+            <div class="why-icon">🥣</div>
+            <h3>Made Your Way</h3>
+            <p>Pick, mix and create your favourite combination.</p>
+          </div>
+
+          <div class="why-card fade-in-up delay-2">
+            <div class="why-icon">⚡</div>
+            <h3>Quick &amp; Convenient</h3>
+            <p>Fresh food without the fuss.</p>
+          </div>
+
+          <div class="why-card fade-in-up delay-3">
+            <div class="why-icon">🥗</div>
+            <h3>Made For You</h3>
+            <p>Build a salad that suits your taste.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase-section section-padding bg-cream" id="showcase">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">Farm to Bowl</span>
+          <h2 class="section-title">Ingredient Showcase</h2>
+          <p class="section-subtitle">Every bowl begins with naturally sourced, vibrant, and crisp produce.</p>
+        </div>
+
+        <div class="showcase-gallery">
+          <div class="gallery-item item-large fade-in-up">
+            <img 
+              src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" 
+              alt="Crisp salad bowl with fresh greens and dressing" 
+              loading="lazy"
+              width="800"
+              height="600"
+            />
+            <div class="gallery-overlay">
+              <span>Signature Tossed Bowls</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in-up delay-1">
+            <img 
+              src="https://images.unsplash.com/photo-1506802913710-40e2e66339c9?auto=format&fit=crop&w=600&q=80" 
+              alt="Fresh tomatoes and leafy greens" 
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <div class="gallery-overlay">
+              <span>Fresh Garden Produce</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in-up delay-2">
+            <img 
+              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" 
+              alt="Avocado and assorted salad toppings" 
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <div class="gallery-overlay">
+              <span>Wholesome Toppings</span>
+            </div>
+          </div>
+          <div class="gallery-item fade-in-up delay-3">
+            <img 
+              src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=600&q=80" 
+              alt="Hand-mixed salad bowl" 
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+            <div class="gallery-overlay">
+              <span>House Dressings</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="order-cta-section section-padding" id="order">
+      <div class="container">
+        <div class="order-cta-box text-center fade-in-up">
+          <span class="cta-kicker">Instant Freshness</span>
+          <h2 class="cta-heading">Ready to Go Fresh?</h2>
+          <p class="cta-tagline">Pick. Mix. Go.</p>
+          <div class="cta-buttons-wrapper">
+            <a href="tel:+919769616262" class="btn btn-accent">Call to Order Now</a>
+            <a href="#menu" class="btn btn-outline-white">View Menu</a>
+          </div>
+          <p class="cta-note">Takeaway &amp; Quick Pickup available at New Panvel location.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-contact-section section-padding bg-cream" id="location">
+      <div class="container">
+        <div class="section-header text-center fade-in-up">
+          <span class="section-kicker">Visit Us</span>
+          <h2 class="section-title">Find Us &amp; Opening Hours</h2>
+          <p class="section-subtitle">Stop by for a fresh bowl or get in touch for takeaways.</p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-info-col fade-in-up">
+            <div class="info-card">
+              <h3 class="info-card-title">GoSalad @ Salads Lab</h3>
+              <p class="business-name"><strong>Salads Lab</strong></p>
+              
+              <div class="info-item">
+                <span class="info-icon">📍</span>
+                <address class="address-text">
+                  Salads Lab, RH-4, Harsha Varsha C.H.S,<br />
+                  Plot No. 3, Sector 3,<br />
+                  New Panvel, Navi Mumbai,<br />
+                  Maharashtra - 410206
+                </address>
+              </div>
+
+              <div class="info-item" id="contact">
+                <span class="info-icon">📞</span>
+                <div>
+                  <a href="tel:+919769616262" class="contact-link">+91 9769616262</a>
+                  <span class="contact-hint">(Tap to call)</span>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <span class="info-icon">✉️</span>
+                <div>
+                  <a href="mailto:saladslabpanvel@gmail.com" class="contact-link">saladslabpanvel@gmail.com</a>
+                </div>
+              </div>
+
+              <a 
+                href="https://maps.google.com/?q=Salads+Lab,+RH-4,+Harsha+Varsha+C.H.S,+Plot+No.+3,+Sector+3,+New+Panvel,+Navi+Mumbai,+Maharashtra+410206" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="btn btn-primary btn-block location-btn"
+              >
+                Get Directions ↗
+              </a>
+            </div>
+
+            <div class="info-card hours-card">
+              <div class="hours-header">
+                <h3>Opening Times</h3>
+                <span class="hours-sub">( INVITING EVERYDAY )</span>
+              </div>
+              <ul class="hours-list">
+                <li><span>Monday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Tuesday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Wednesday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Thursday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Friday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Saturday</span> <span>12:00 PM - 11:30 PM</span></li>
+                <li><span>Sunday</span> <span>12:00 PM - 11:30 PM</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="location-map-col fade-in-up delay-1">
+            <div class="map-container">
+              <iframe 
+                title="Salads Lab New Panvel Location Map"
+                src="https://maps.google.com/maps?q=Sector%203%20New%20Panvel%20Navi%20Mumbai%20410206&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content-grid">
       <div class="footer-col brand-col">
-        <div class="logo">
-          <img src="images/logo.svg" alt="GoSalad" class="logo-img" />
-          <span>Go<span style="color:#60a5fa;">Salad</span></span>
+        <img src="images/logo.svg" alt="GoSalad Logo" class="footer-logo" width="180" height="45" />
+        <p class="footer-brand-desc">
+          Fresh handcrafted salad bowls made your way. Pick your greens, mix your favourites, and enjoy natural freshness daily.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#build">Build Your Salad</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Salads Lab Location</h4>
+        <address class="footer-address">
+          Salads Lab, RH-4, Harsha Varsha C.H.S,<br />
+          Plot No. 3, Sector 3,<br />
+          New Panvel, Navi Mumbai,<br />
+          Maharashtra - 410206
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Get in Touch</h4>
+        <p class="footer-contact-item">
+          Phone: <a href="tel:+919769616262">+91 9769616262</a>
+        </p>
+        <p class="footer-contact-item">
+          Email: <a href="mailto:saladslabpanvel@gmail.com">saladslabpanvel@gmail.com</a>
+        </p>
+        <div class="footer-hours-pill">
+          <strong>Open Everyday:</strong> 12:00 PM - 11:30 PM
         </div>
-        <p>Crafting India's freshest artisanal salad bowls every single day. Taste the crunch, nourish the body.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#menu">Our Menu</a></li>
-          <li><a href="#features">Our Quality</a></li>
-          <li><a href="#about">About GoSalad</a></li>
-          <li><a href="#contact">Contact & Catering</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Dietary Menus</h4>
-        <ul>
-          <li><a href="#menu">High Protein Bowls</a></li>
-          <li><a href="#menu">Keto Specials</a></li>
-          <li><a href="#menu">Vegan Delights</a></li>
-          <li><a href="#menu">Low Calorie Meals</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Newsletter</h4>
-        <p>Subscribe for weekly calorie trackers and ₹100 discount coupons.</p>
-        <form class="footer-newsletter" id="newsletterForm">
-          <input type="email" placeholder="Enter email address" required />
-          <button type="submit">Join</button>
-        </form>
       </div>
     </div>
 
     <div class="container footer-bottom">
-      <p>&copy; 2026 GoSalad Technologies Private Limited. All Rights Reserved.</p>
+      <p>&copy; 2026 GoSalad. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <!-- Slide-out Cart Drawer -->
-  <div class="cart-drawer-overlay" id="cartOverlay"></div>
-  <aside class="cart-drawer" id="cartDrawer">
-    <div class="cart-header">
-      <h3>Your Salad Box (<span id="cartDrawerCount">0</span>)</h3>
-      <button class="close-cart-btn" id="closeCartBtn">&times;</button>
-    </div>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    &#8593;
+  </button>
 
-    <div class="cart-items" id="cartItemsList">
-      <div class="empty-cart-msg">Your bowl box is empty. Add a refreshing salad!</div>
-    </div>
-
-    <div class="cart-footer">
-      <div class="cart-subtotal">
-        <span>Total Amount:</span>
-        <strong id="cartTotalPrice">₹0</strong>
-      </div>
-      <button class="btn btn-primary checkout-btn" onclick="proceedCheckout()">Proceed to Checkout (INR)</button>
-    </div>
-  </aside>
-
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
