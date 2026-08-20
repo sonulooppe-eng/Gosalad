@@ -1249,6 +1249,7 @@ img {
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
+     .hero-visual-col { display: none; }
   }
   
   .hero-subtitle {
