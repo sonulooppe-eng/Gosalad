@@ -33,7 +33,7 @@ const MENU_ITEMS = [
     description: 'A refreshing combination of guava, carrot & cucumber, topped with roasted peanuts and sesame seeds',
     price: '₹269',
     popular: true,
-    image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80'
+    image: 'images/Guava Chilli Crunch.PNG'
   },
   {
     id: 3,
