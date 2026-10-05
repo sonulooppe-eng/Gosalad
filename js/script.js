@@ -19,18 +19,18 @@ const MENU_ITEMS = [
   {
     id: 1,
     category: 'signature',
-    name: 'Garden Harvest Bowl',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Japanese Cucumber Salad',
+    description: 'Fresh cucumber tossed with roasted sesame seeds',
+    price: '₹199',
     popular: true,
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80'
   },
   {
     id: 2,
     category: 'signature',
-    name: 'Mediterranean Crunch',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Guava Chilli Crunch',
+    description: 'A refreshing combination of guava, carrot & cucumber, topped with roasted peanuts and sesame seeds',
+    price: '₹269',
     popular: true,
     image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=500&q=80'
   },
@@ -46,9 +46,9 @@ const MENU_ITEMS = [
   {
     id: 4,
     category: 'byo',
-    name: 'Custom Greens Base',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Apple Waldorf Salad',
+    description: 'Crisp apple, topped with roasted walnuts',
+    price: '₹289',
     popular: false,
     image: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?auto=format&fit=crop&w=500&q=80'
   },
