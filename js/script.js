@@ -37,11 +37,11 @@ const MENU_ITEMS = [
   {
     id: 3,
     category: 'signature',
-    name: 'Citrus Avocado Toss',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Mediterranean Chickpea Salad',
+    description: 'A wholesome mix of chickpeas, cucumber, tomato, onion, capsicum & lettuce, topped with toasted peanuts',
+    price: '₹219',
     popular: false,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80'
+    image: 'images/Mediterranean Chickpea Salad.PNG'
   },
   {
     id: 4,
