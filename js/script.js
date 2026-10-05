@@ -23,7 +23,8 @@ const MENU_ITEMS = [
     description: 'Fresh cucumber tossed with roasted sesame seeds',
     price: '₹199',
     popular: true,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80'
+    image: 'images/Japanese Cucumber Salad.PNG'
+  //  image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80'
   },
   {
     id: 2,
