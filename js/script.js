@@ -64,11 +64,11 @@ const MENU_ITEMS = [
   {
     id: 6,
     category: 'protein',
-    name: 'Seared Tofu & Edamame',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Mediterranean Chicken Salad',
+    description: 'A hearty combination of chicken, chickpeas, cucumber, tomato, onion, capsicum & lettuce, topped with toasted peanuts',
+    price: '₹269',
     popular: false,
-    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80'
+    image: 'images/mediterranean chicken.PNG'
   },
   {
     id: 7,
