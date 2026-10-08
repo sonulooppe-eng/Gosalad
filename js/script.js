@@ -55,11 +55,11 @@ const MENU_ITEMS = [
   {
     id: 5,
     category: 'protein',
-    name: 'Herb Grilled Chicken',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    name: 'Mediterranean Egg Salad',
+    description: 'A protein-rich combination of egg, chickpeas, cucumber, tomato, onion, capsicum & lettuce, topped with toasted peanuts',
+    price: '₹219',
     popular: true,
-    image: 'https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=500&q=80'
+    image: 'images/mediterranean egg.PNG'
   },
   {
     id: 6,
