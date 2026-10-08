@@ -32,7 +32,7 @@ const MENU_ITEMS = [
     description: 'A refreshing combination of guava, carrot & cucumber, topped with roasted peanuts and sesame seeds',
     price: '₹269',
     popular: true,
-    image: 'images/Guava Chilli Crunch.PNG'
+    image: 'images/Guava chilli.png'
   },
   {
     id: 3,
@@ -81,12 +81,12 @@ const MENU_ITEMS = [
   },
   {
     id: 8,
-    category: 'dressings',
-    name: 'House Herb Vinaigrette',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    category: 'protein',
+    name: 'Orange, Almond & Chicken Salad',
+    description: 'Signature salad of assorted greens, roasted chicken breast, Egyptian orange, soaked almonds, olives & bread',
+    price: '₹299',
     popular: false,
-    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80'
+    image: 'images/orange chicken.jpg'
   },
   {
     id: 9,
