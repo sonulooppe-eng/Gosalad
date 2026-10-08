@@ -50,7 +50,7 @@ const MENU_ITEMS = [
     description: 'Crisp apple, topped with roasted walnuts',
     price: '₹289',
     popular: false,
-    image: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?auto=format&fit=crop&w=500&q=80'
+    image: 'images/apple wal.PNG'
   },
   {
     id: 5,
