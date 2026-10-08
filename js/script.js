@@ -72,12 +72,12 @@ const MENU_ITEMS = [
   },
   {
     id: 7,
-    category: 'toppings',
-    name: 'Toasted Seeds & Nuts',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    category: 'protein',
+    name: 'Protein Egg Salad',
+    description: 'Boiled egg mixed with freshly cut vegetables. Simple and protein rich',
+    price: '₹149',
     popular: false,
-    image: 'https://images.unsplash.com/photo-1506802913710-40e2e66339c9?auto=format&fit=crop&w=500&q=80'
+    image: 'images/Protein Egg.jpg'
   },
   {
     id: 8,
