@@ -92,8 +92,8 @@ const MENU_ITEMS = [
     id: 9,
     category: 'beverages',
     name: 'Cold Pressed Green Juice',
-    description: '[DESCRIPTION]',
-    price: '[PRICE]',
+    description: 'loading...',
+    price: '...',
     popular: true,
     image: 'https://images.unsplash.com/photo-1613478223719-2ab802602423?auto=format&fit=crop&w=500&q=80'
   }
